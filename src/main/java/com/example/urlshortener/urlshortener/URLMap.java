@@ -19,16 +19,17 @@ public class URLMap {
             generator = "url"
     )
     private long id;
-    private long baseurl;
-    private long mapurl;
+    private String baseurl;
+    private String mapurl;
     private LocalDateTime createdtime;
 
     public URLMap() {
     }
 
-    public URLMap(long baseurl, long mapurl) {
+    public URLMap(String baseurl, String mapurl) {
         this.baseurl = baseurl;
         this.mapurl = mapurl;
+        createdtime = LocalDateTime.now();
     }
 
     public long getId() {
@@ -39,19 +40,19 @@ public class URLMap {
         this.id = id;
     }
 
-    public long getBaseurl() {
+    public String getBaseurl() {
         return baseurl;
     }
 
-    public void setBaseurl(long baseurl) {
+    public void setBaseurl(String baseurl) {
         this.baseurl = baseurl;
     }
 
-    public long getMapurl() {
+    public String getMapurl() {
         return mapurl;
     }
 
-    public void setMapurl(long mapurl) {
+    public void setMapurl(String mapurl) {
         this.mapurl = mapurl;
     }
 
